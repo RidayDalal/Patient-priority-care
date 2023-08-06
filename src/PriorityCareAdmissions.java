@@ -1,12 +1,13 @@
+package src;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 /**
  * Array-based min-heap implementation of a priority queue storing PatientRecords. Guarantees the
- * min-heap invariant, so that the PatientRecord at the root should be the smallest PatientRecord,
+ * min-heap invariant, so that the src.PatientRecord at the root should be the smallest src.PatientRecord,
  * which corresponds to the element having the highest priority to be dequeued first, and children
- * always are greater than their parent. We rely on the PatientRecord.compareTo() method to compare
+ * always are greater than their parent. We rely on the src.PatientRecord.compareTo() method to compare
  * PatientRecords.
  * The root of a non-empty queue is always at index 0 of this array-heap.
  */
@@ -16,9 +17,9 @@ public class PriorityCareAdmissions {
 
 
     /**
-     * Creates a new empty PriorityCareAdmissions queue with the given capacity
+     * Creates a new empty src.PriorityCareAdmissions queue with the given capacity
      *
-     * @param capacity Capacity of this PriorityCareAdmissions queue
+     * @param capacity Capacity of this src.PriorityCareAdmissions queue
      * @throws IllegalArgumentException with a descriptive error message if the capacity is not a
      *                                  positive integer
      */
@@ -33,27 +34,27 @@ public class PriorityCareAdmissions {
     }
 
     /**
-     * Checks whether this PriorityCareAdmissions queue is empty
+     * Checks whether this src.PriorityCareAdmissions queue is empty
      *
-     * @return {@code true} if this PriorityCareAdmissions queue is empty
+     * @return {@code true} if this src.PriorityCareAdmissions queue is empty
      */
     public boolean isEmpty() {
         return this.size == 0;
     }
 
     /**
-     * Returns the size of this PriorityCareAdmissions queue
+     * Returns the size of this src.PriorityCareAdmissions queue
      *
-     * @return the total number of PatientRecords stored in this PriorityCareAdmissions queue
+     * @return the total number of PatientRecords stored in this src.PriorityCareAdmissions queue
      */
     public int size() {
         return this.size;
     }
 
     /**
-     * Returns the capacity of this PriorityCareAdmissions queue
+     * Returns the capacity of this src.PriorityCareAdmissions queue
      *
-     * @return the capacity of this PriorityCareAdmissions queue
+     * @return the capacity of this src.PriorityCareAdmissions queue
      */
     public int capacity() {
         return queue.length;
@@ -61,7 +62,7 @@ public class PriorityCareAdmissions {
 
 
     /**
-     * Removes all the elements from this PriorityCareAdmissions queue
+     * Removes all the elements from this src.PriorityCareAdmissions queue
      */
     public void clear() {
         Arrays.fill(queue, null);
@@ -69,12 +70,12 @@ public class PriorityCareAdmissions {
     }
 
     /**
-     * Returns the PatientRecord at the root of this PriorityCareAdmissions queue, i.e. the
-     * PatientRecord having the highest priority.
+     * Returns the src.PatientRecord at the root of this src.PriorityCareAdmissions queue, i.e. the
+     * src.PatientRecord having the highest priority.
      *
-     * @return the PatientRecord at the root of this PriorityCareAdmissions queue
+     * @return the src.PatientRecord at the root of this src.PriorityCareAdmissions queue
      * @throws NoSuchElementException with the exact error message "Warning: Empty Admissions Queue!"
-     *                                if this PriorityCareAdmissions queue is empty
+     *                                if this src.PriorityCareAdmissions queue is empty
      */
     public PatientRecord peek() {
         if (isEmpty()) {
@@ -86,15 +87,15 @@ public class PriorityCareAdmissions {
 
 
     /**
-     * Adds the given PatientRecord to this PriorityCareAdmissions queue at the correct position based
+     * Adds the given src.PatientRecord to this src.PriorityCareAdmissions queue at the correct position based
      * on the min-heap ordering. This queue should maintain the min-heap invariant, so that the
-     * PatientRecord at each index is less than or equal to than the PatientRecords in its child
-     * nodes. PatientRecords should be compared using the PatientRecord.compareTo() method.
+     * src.PatientRecord at each index is less than or equal to than the PatientRecords in its child
+     * nodes. PatientRecords should be compared using the src.PatientRecord.compareTo() method.
      *
-     * @param p PatientRecord to add to this PriorityCareAdmissions queue
-     * @throws NullPointerException  if the given PatientRecord is null
+     * @param p src.PatientRecord to add to this src.PriorityCareAdmissions queue
+     * @throws NullPointerException  if the given src.PatientRecord is null
      * @throws IllegalStateException with a the exact error message "Warning: Full Admissions Queue!"
-     *                               if this PriorityCareAdmissions queue is full
+     *                               if this src.PriorityCareAdmissions queue is full
      */
     public void addPatient(PatientRecord p) {
 
@@ -144,13 +145,13 @@ public class PriorityCareAdmissions {
     }
 
     /**
-     * Removes and returns the PatientRecord at the root of this PriorityCareAdmissions queue, i.e.
-     * the PatientRecord having the highest priority (the minimum one).
+     * Removes and returns the src.PatientRecord at the root of this src.PriorityCareAdmissions queue, i.e.
+     * the src.PatientRecord having the highest priority (the minimum one).
      *
-     * @return the PatientRecord in this PriorityCareAdmissions queue at the root of this priority
+     * @return the src.PatientRecord in this src.PriorityCareAdmissions queue at the root of this priority
      *         queue.
      * @throws NoSuchElementException with the exact error message "Warning: Empty Admissions Queue!"
-     *                                if this PriorityCareAdmissions queue is empty
+     *                                if this src.PriorityCareAdmissions queue is empty
      */
     public PatientRecord removeBestRecord() {
 
@@ -214,12 +215,12 @@ public class PriorityCareAdmissions {
 
 
     /**
-     * Returns a deep copy of this PriorityCareAdmissions queue containing all of its elements in the
+     * Returns a deep copy of this src.PriorityCareAdmissions queue containing all of its elements in the
      * same order. This method does not return the deepest copy, meaning that you do not need to
      * duplicate PatientRecords. Only the instance of the heap (including the array and its size) will
      * be duplicated.
      *
-     * @return a deep copy of this PriorityCareAdmissions queue. The returned new priority care
+     * @return a deep copy of this src.PriorityCareAdmissions queue. The returned new priority care
      *         admissions queue has the same length and size as this queue.
      */
     public PriorityCareAdmissions deepCopy() {
@@ -230,7 +231,7 @@ public class PriorityCareAdmissions {
     }
 
     /**
-     * Returns a deep copy of the array-heap of this PriorityCareAdmissions queue <BR/>
+     * Returns a deep copy of the array-heap of this src.PriorityCareAdmissions queue <BR/>
      *
      * This method can be used for testing purposes.
      *
@@ -241,10 +242,10 @@ public class PriorityCareAdmissions {
 
     }
     /**
-     * Returns a String representing this PriorityCareAdmissions queue, where each element
-     * (PatientRecord) of the queue is listed on a separate line, in order from smallest to greatest.
+     * Returns a String representing this src.PriorityCareAdmissions queue, where each element
+     * (src.PatientRecord) of the queue is listed on a separate line, in order from smallest to greatest.
      *
-     * @return a String representing this PriorityCareAdmissions queue, and an empty String "" if this
+     * @return a String representing this src.PriorityCareAdmissions queue, and an empty String "" if this
      *         queue is empty.
      */
     public String toString() {

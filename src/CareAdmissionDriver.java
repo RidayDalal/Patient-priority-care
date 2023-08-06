@@ -1,3 +1,4 @@
+package src;
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class CareAdmissionDriver {
 
 
     /**
-     * Creates and initializes a CareAdmissionDriver object
+     * Creates and initializes a src.CareAdmissionDriver object
      *
      * @param capacity capacity of the admission queue
      * @throws IllegalArgumentException if capacity is negative

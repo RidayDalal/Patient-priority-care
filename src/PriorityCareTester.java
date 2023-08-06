@@ -1,3 +1,4 @@
+package src;
 
 import java.util.NoSuchElementException;
 
@@ -8,9 +9,9 @@ import java.util.NoSuchElementException;
 public class PriorityCareTester {
 
     /**
-     * Tests whether compareTo() method implemented in PatientRecord returns a positive integer when a
+     * Tests whether compareTo() method implemented in src.PatientRecord returns a positive integer when a
      * higher triage level is compared to a lower triage level, regardless of patient order of
-     * arrival. Similarly, this method tests whether compareTo() method implemented in PatientRecord
+     * arrival. Similarly, this method tests whether compareTo() method implemented in src.PatientRecord
      * returns a negative integer when a lower triage level is compared to a higher triage level,
      * regardless of patient order of arrival.
      *
@@ -158,16 +159,16 @@ public class PriorityCareTester {
     }
 
     /**
-     * Tests the functionality of the constructor for PriorityCareAdmissions Should implement at least
+     * Tests the functionality of the constructor for src.PriorityCareAdmissions Should implement at least
      * the following tests:
      *
-     * - Calling the PriorityCareAdmissions with an invalid capacity should throw an
+     * - Calling the src.PriorityCareAdmissions with an invalid capacity should throw an
      * IllegalArgumentException
-     * - Calling the PriorityCareAdmissions with a valid capacity should not throw any errors, and
-     * should result in a new PriorityCareAdmissions which is empty, has size 0, a capacity equal to
+     * - Calling the src.PriorityCareAdmissions with a valid capacity should not throw any errors, and
+     * should result in a new src.PriorityCareAdmissions which is empty, has size 0, a capacity equal to
      * the capacity that was passed as a parameter.
      *
-     * @return true if the constructor of PriorityCareAdmissions functions properly, false otherwise
+     * @return true if the constructor of src.PriorityCareAdmissions functions properly, false otherwise
      */
     public static boolean testConstructor() {
         PatientRecord.resetCounter();
@@ -207,7 +208,7 @@ public class PriorityCareTester {
      * Tests the functionality of peek() method by calling peek on an empty queue and verifying it
      * throws a NoSuchElementException.
      *
-     * @return true if PriorityCareAdmissions.peek() exhibits expected behavior, false otherwise.
+     * @return true if src.PriorityCareAdmissions.peek() exhibits expected behavior, false otherwise.
      */
     public static boolean testPeekEmpty() {
         PatientRecord.resetCounter();
@@ -226,8 +227,8 @@ public class PriorityCareTester {
 
     /**
      * Tests the functionality of peek() method by calling peek on a non-empty queue and verifying it
-     * 1) returns the PatientRecord having the highest priority (the minimum) and 2) does not remove
-     * the PatientRecord from the queue.
+     * 1) returns the src.PatientRecord having the highest priority (the minimum) and 2) does not remove
+     * the src.PatientRecord from the queue.
      *
      * @return true if the tester verifies a correct functionality and false if at least one bug is
      *         detected
@@ -262,9 +263,9 @@ public class PriorityCareTester {
 
     /**
      * Tests the functionality of addPatient() method by calling addPatient() on an empty queue and
-     * ensuring the method 1) adds the PatientRecord and 2) increments the size.
+     * ensuring the method 1) adds the src.PatientRecord and 2) increments the size.
      *
-     * @return true if PriorityCareAdmissions.addPatient() exhibits expected behavior, false
+     * @return true if src.PriorityCareAdmissions.addPatient() exhibits expected behavior, false
      *         otherwise.
      */
     public static boolean testAddPatientEmpty() {
@@ -296,10 +297,10 @@ public class PriorityCareTester {
 
     /**
      * Tests the functionality of addPatient() method by calling addPatient() on a non-empty queue and
-     * ensuring the method 1) adds the PatientRecord at the proper position and 2) increments the
+     * ensuring the method 1) adds the src.PatientRecord at the proper position and 2) increments the
      * size. Try add at least 5 PatientRecords.
      *
-     * @return true if PriorityCareAdmissions.addPatient() exhibits expected behavior, false otherwise
+     * @return true if src.PriorityCareAdmissions.addPatient() exhibits expected behavior, false otherwise
      */
     public static boolean testAddPatientNonEmpty() {
 
@@ -339,7 +340,7 @@ public class PriorityCareTester {
      * Tests the functionality of addPatient() method by calling addPatient() on a full queue and
      * ensuring the method throws an IllegalStateException.
      *
-     * @return true if PriorityCareAdmissions.addPatient() exhibits expected behavior, false
+     * @return true if src.PriorityCareAdmissions.addPatient() exhibits expected behavior, false
      *         otherwise.
      */
     public static boolean testAddPatientFull() {
@@ -368,9 +369,9 @@ public class PriorityCareTester {
 
     /**
      * Tests the functionality of addPatient() method by calling addPatient() with a null
-     * PatientRecord and ensuring the method throws a NullPointerException.
+     * src.PatientRecord and ensuring the method throws a NullPointerException.
      *
-     * @return true if PriorityCareAdmissions.addPatient() exhibits expected behavior, false
+     * @return true if src.PriorityCareAdmissions.addPatient() exhibits expected behavior, false
      *         otherwise.
      */
     public static boolean testAddPatientNull() {
@@ -396,7 +397,7 @@ public class PriorityCareTester {
      * Tests the functionality of removeBestRecord() method by calling removeBestRecord() on an empty
      * queue.
      *
-     * @return true if PriorityCareAdmissions.removeBestRecord() throws a NoSuchElementException,
+     * @return true if src.PriorityCareAdmissions.removeBestRecord() throws a NoSuchElementException,
      *         false otherwise
      */
     public static boolean testRemoveBestRecordEmpty() {
@@ -421,7 +422,7 @@ public class PriorityCareTester {
      * Tests the functionality of removeBestRecord() method by calling removeBestRecord() on a queue
      * of size one.
      *
-     * @return true if PriorityCareAdmissions.removeBestRecord() returns the correct PatientRecord and
+     * @return true if src.PriorityCareAdmissions.removeBestRecord() returns the correct src.PatientRecord and
      *         size is 0
      */
     public static boolean testRemoveBestRecordSizeOne() {
@@ -459,7 +460,7 @@ public class PriorityCareTester {
      * Remove the best record from a queue whose size is at least 6. Consider cases where
      * percolate-down recurses on left and right.
      *
-     * @return true if PriorityCareAdmissions.removeBestRecord() returns the correct PatientRecord
+     * @return true if src.PriorityCareAdmissions.removeBestRecord() returns the correct src.PatientRecord
      *         each time it is called and size is appropriately decremented, false otherwise
      */
     public static boolean testRemoveBestRecordNonEmpty() {
@@ -515,7 +516,7 @@ public class PriorityCareTester {
      * - After calling clear(), the queue should contain zero PatientRecords.
      * - After calling clear(), the size should be 0
      *
-     * @return true if PriorityCareAdmissions.clear() functions properly
+     * @return true if src.PriorityCareAdmissions.clear() functions properly
      */
     public static boolean testClear() {
 
@@ -553,7 +554,7 @@ public class PriorityCareTester {
 
 
     /**
-     * Tests toString() method of PriorityCareAdmissions class.
+     * Tests toString() method of src.PriorityCareAdmissions class.
      *
      * @return true if the tester verifies a correct functionality and false if at least one bug is
      *         detected

@@ -1,6 +1,7 @@
+package src;
 
 /**
- * This class models PatientRecord objects to be managed in a priority queue at an urgent care service.
+ * This class models src.PatientRecord objects to be managed in a priority queue at an urgent care service.
  *
  */
 public class PatientRecord implements Comparable<PatientRecord> {
@@ -79,7 +80,7 @@ public class PatientRecord implements Comparable<PatientRecord> {
     }
 
     /**
-     * For tester class purposes only: resets PatientRecord.patientCounter to 1. This method should be
+     * For tester class purposes only: resets src.PatientRecord.patientCounter to 1. This method should be
      * called at the beginning of EACH tester method to ensure that the methods are not dependent on
      * being called in a particular order.
      */
@@ -131,7 +132,7 @@ public class PatientRecord implements Comparable<PatientRecord> {
     }
 
     /**
-     * Creates and returns a String representation of this PatientRecord formatted as follows:
+     * Creates and returns a String representation of this src.PatientRecord formatted as follows:
      * CASE_NUMBER: <age><gender> (triage) - seen/not seen
      *
      * Below are three examples of string representations of three different Patient Records:
@@ -139,7 +140,7 @@ public class PatientRecord implements Comparable<PatientRecord> {
      * 11703: 17F (RED) - seen
      * 32102: 21X (GREEN) - not seen
      *
-     * @return a String representation of this PatientRecord.
+     * @return a String representation of this src.PatientRecord.
      */
     @Override
     public String toString() {
@@ -148,10 +149,10 @@ public class PatientRecord implements Comparable<PatientRecord> {
     }
 
     /**
-     * Checks whether this PatientRecord equals another specific object passed as input.
+     * Checks whether this src.PatientRecord equals another specific object passed as input.
      *
      * @param other other object to compare
-     * @return {@code true} if other is instanceof PatientRecord and this PatientRecord and other have
+     * @return {@code true} if other is instanceof src.PatientRecord and this src.PatientRecord and other have
      *         the exact same CASE_Number
      */
     @Override
@@ -162,24 +163,24 @@ public class PatientRecord implements Comparable<PatientRecord> {
 
 
     /**
-     * Compares this PatientRecord to another patientRecord provided as input.
+     * Compares this src.PatientRecord to another patientRecord provided as input.
      * PatientRecords are first compared with respect to their triage levels. The smaller
-     * PatientRecord is the one having a smaller triage. TriageLevels can be compared using the
-     * TriageLevel.compareTo() method. By default, RED is less than YELLOW, and YELLOW is less than
+     * src.PatientRecord is the one having a smaller triage. TriageLevels can be compared using the
+     * src.TriageLevel.compareTo() method. By default, RED is less than YELLOW, and YELLOW is less than
      * green.
      *
      * If the PatientRecords have the same triage levels, they will be compared with respect to the
-     * order of arrival. For example, if PatientRecord A arrived before PatientRecord B and both have
+     * order of arrival. For example, if src.PatientRecord A arrived before src.PatientRecord B and both have
      * a YELLOW triage level, then A is less than B.
      *
      * If the PatientRecords have the same triage level and the same order of arrival, then they are
-     * considered equal. (This is expected behavior of PatientRecord even though you will not have
+     * considered equal. (This is expected behavior of src.PatientRecord even though you will not have
      * equal PatientRecords in your priority queue.)
      *
-     * @param other PatientRecord to compare with
-     * @return zero if this PatientRecord and other have the same triage level and same order of
-     *         arrival; a negative integer if this PatientRecord is less than other; and a positive
-     *         integer if this PatientRecord is greater than other.
+     * @param other src.PatientRecord to compare with
+     * @return zero if this src.PatientRecord and other have the same triage level and same order of
+     *         arrival; a negative integer if this src.PatientRecord is less than other; and a positive
+     *         integer if this src.PatientRecord is greater than other.
      */
     @Override
     public int compareTo(PatientRecord other) {
